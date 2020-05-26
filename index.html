@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/ec6823c127.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -18,8 +19,8 @@
       <div class="status-bar__column">
         <i class="fab fa-bluetooth-b"></i>
         <i class="fas fa-wifi"></i>
-        <i class="fas fa-battery-full"></i>
         <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-battery-full"></i>
         <span class="status-bar__battery-level">100%</span>
       </div>
     </div>
@@ -43,15 +44,21 @@
       <ul class="chats__list">
         <li class="chats__chat">
           <a href="chat.html">
-            <div class="chat__column">
-              <img src="images/my_profile.png" class="chat__avatar" />
-              <div class="chat__content">
-                <span class="chat__username">Kim</span>
-                <span class="chat__preview">Hi</span>
+            <div class="chats__chat friend friend--lg">
+              <div class="friend__column">
+                <img
+                  src="images/my_profile.png"
+                  alt=""
+                  class="m-avatar friend__avatar"
+                />
+                <div class="friend__content">
+                  <span class="friend__name">Deokhyeon</span>
+                  <span class="friend__bottom-text">Hi Hi.</span>
+                </div>
               </div>
-            </div>
-            <div class="chat__column">
-              <span class="chat__timestamp">Yesterday</span>
+              <div class="friend__column">
+                <span class="chat__timestamp">Yesterday</span>
+              </div>
             </div>
           </a>
         </li>
@@ -68,6 +75,7 @@
           <a href="index.html" class="nav__list-link">
             <i class="fas fa-comment"></i>
           </a>
+          <div class="nav__badge">5</div>
         </li>
         <li class="nav__list-item">
           <a href="find.html" class="nav__list-link">
@@ -81,5 +89,8 @@
         </li>
       </ul>
     </nav>
+    <div class="bigScreen">
+      <span class="bigScreen__text">Please make your screen small.</span>
+    </div>
   </body>
 </html>

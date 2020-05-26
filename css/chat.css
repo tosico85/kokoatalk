@@ -1,0 +1,222 @@
+.header-wrapper {
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-shadow: 0px 5px 10px #bbbbbb;
+  z-index: 2;
+}
+
+.chats-body {
+  padding: 0px;
+  padding-top: 90px;
+}
+
+.chats-body .status-bar {
+  padding: 10px 20px;
+}
+
+.chats-body .header {
+  padding: 0px 20px;
+}
+
+.chat {
+  background-image: url("../images/white-waves.png");
+  min-height: 1000vh;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0px 18px 30px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.chat__write--container {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  /*background-color: #fcfcfc;
+  padding: 0px 20px;
+  border-radius: 40px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat__write--container input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+  padding: 20px 60px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    width 0.5s ease-in-out;
+}
+
+.chat__write--container input:focus {
+  outline: none;
+  transform: translateY(-100px);
+  border-radius: 40px;
+  width: 70%;
+  animation: float 3s linear infinite forwards;
+}
+
+.chat__write--container .chat__icon-right {
+  position: absolute;
+  right: 20px;
+}
+
+.chat__write--container .chat__icon-left {
+  position: absolute;
+  left: 20px;
+}
+
+.chat__write ~ .chat-icon {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.chat__write:focus ~ .chat-icon {
+  opacity: 0;
+}
+
+.chat__messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.chat__messages .chat__timestamp {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px #cfcfcf;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.message__content {
+  width: 100%;
+}
+
+.message__content .message__author {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.message__content .message__bubble {
+  box-shadow: 0px 10px 15px #cfcfcf;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 15px;
+
+  background: #24c6dc; /* fallback for old browsers */
+  color: white;
+  font-weight: 600;
+}
+
+.message .m-avatar {
+  width: 50px;
+  border-radius: 35%;
+  margin-right: 15px;
+  animation: spin 1s linear infinite;
+}
+
+.incomming-message {
+  align-self: flex-start;
+  animation: incommingAnim 0.5s linear forwards;
+}
+
+.incomming-message .message__bubble {
+  border-bottom-left-radius: 0px;
+  background: -webkit-linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #514a9d,
+    #24c6dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sent-message .message__bubble {
+  border-bottom-right-radius: 0px;
+  background: #085078; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #85d8ce,
+    #085078
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #85d8ce,
+    #085078
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sent-message {
+  align-self: flex-end;
+  animation: sentAnimation 0.5s linear forwards;
+}
+
+.sent-message .message__content {
+  text-align: right;
+}
+
+@keyframes incommingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes sentAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}

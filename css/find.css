@@ -1,0 +1,32 @@
+.find__header .find__header-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.find__header-list .find__header-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.find__header-btn .header-btn__icon {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.find__title {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+.friend__add-btn {
+  padding: 10px 15px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}

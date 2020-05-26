@@ -8,7 +8,8 @@
       src="https://kit.fontawesome.com/ec6823c127.js"
       crossorigin="anonymous"
     ></script>
-    <title>Friends | Kakao Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>friends | Kakao Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -18,14 +19,14 @@
       <div class="status-bar__column">
         <i class="fab fa-bluetooth-b"></i>
         <i class="fas fa-wifi"></i>
-        <i class="fas fa-battery-full"></i>
         <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-battery-full"></i>
         <span class="status-bar__battery-level">100%</span>
       </div>
     </div>
     <header class="header">
       <div class="header__header-column">
-        <h1 class="header__title">Friends</h1>
+        <h1 class="header__title">friends</h1>
       </div>
       <div class="header__header-column">
         <span class="header__icon">
@@ -58,14 +59,10 @@
       </header>
       <div class="friends__plus-friend">
         <ul class="friends__list">
-          <h5 class="friends__title">채널</h5>
+          <h5 class="friends__title">Plus Friend</h5>
           <li class="friends__friend friend">
             <div class="friend__column">
-              <img
-                src="images/my_profile.png"
-                alt=""
-                class="g-avatar friend__avatar"
-              />
+              <img src="images/my_profile.png" alt="" class="friend__avatar" />
               <div class="friend__content">
                 <span class="friend__name">Deokhyeon</span>
                 <span class="friend__status">nomadcoders.co</span>
@@ -76,21 +73,17 @@
         </ul>
       </div>
       <ul class="friends__list">
-        <h5 class="friends__title">채널</h5>
+        <h5 class="friends__title">friends</h5>
         <li class="friends__friend friend">
           <div class="friend__column">
-            <img
-              src="images/my_profile.png"
-              alt=""
-              class="g-avatar friend__avatar"
-            />
+            <img src="images/my_profile.png" alt="" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">Deokhyeon</span>
               <span class="friend__status">nomadcoders.co</span>
             </div>
           </div>
           <div class="friend__column">
-            <div class="friend__now-listning">
+            <div class="friend__now-listening">
               <span>play music time (KaKao band)</span>
               <i class="fas fa-play"></i>
             </div>
@@ -109,6 +102,7 @@
           <a href="index.html" class="nav__list-link">
             <i class="far fa-comment"></i>
           </a>
+          <div class="nav__badge">5</div>
         </li>
         <li class="nav__list-item">
           <a href="find.html" class="nav__list-link">
@@ -122,5 +116,8 @@
         </li>
       </ul>
     </nav>
+    <div class="bigScreen">
+      <span class="bigScreen__text">Please make your screen small.</span>
+    </div>
   </body>
 </html>
