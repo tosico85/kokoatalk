@@ -32,6 +32,23 @@
   background-color: #de5d42;
   color: white;
   border-radius: 9px;
+  animation: aniBadge 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes aniBadge {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-10px) rotateY(0.5turn);
+  }
+  50% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
 }
 
 .nav__list-item {
